@@ -21,7 +21,7 @@ Works in **Chrome, Brave, Edge, Vivaldi** and other Chromium-based browsers, on 
 - Works with qBittorrent's built-in security protection switched on. You don't need to turn anything off.
 - Light and dark mode.
 
-![Toolbar popup](docs/screenshots/2-toolbar-popup.png)
+![Toolbar popup](magnet-handler-github-repo/docs/screenshots/2-toolbar-popup.png)
 
 ## Installing
 
