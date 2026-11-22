@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { width: 320px; padding: 14px; }
+    h1 { font-size: 15px; }
+    h1 img { width: 20px; height: 20px; }
+    #conn { margin: 6px 0 12px; }
+    #speeds { color: var(--muted); font-size: 12px; margin-top: 2px; }
+    .row button { flex: 1; }
+  </style>
+</head>
+<body>
+  <h1><img src="icons/icon32.png" alt="">Magnet Handler for qBittorrent</h1>
+  <div id="conn" class="status">Checking connection…</div>
+  <div id="speeds"></div>
+
+  <textarea id="link" placeholder="Paste a magnet link, .torrent URL or info-hash"></textarea>
+  <div class="row" style="margin-top:8px">
+    <button id="add" class="primary">Add</button>
+  </div>
+  <div id="result" class="status" style="margin:8px 0 4px"></div>
+
+  <div class="row" style="margin-top:10px">
+    <button id="webui">Open Web UI</button>
+    <button id="settings">Settings</button>
+  </div>
+  <script src="popup.js" type="module"></script>
+</body>
+</html>

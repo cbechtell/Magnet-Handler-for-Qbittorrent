@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Magnet Handler for qBittorrent — Settings</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    main { max-width: 560px; margin: 0 auto; padding: 32px 16px 60px; }
+    .actions { position: sticky; bottom: 0; background: var(--bg); padding: 14px 0; margin-top: 24px; border-top: 1px solid var(--line); }
+  </style>
+</head>
+<body>
+<main>
+  <h1><img src="icons/icon48.png" alt="">Magnet Handler for qBittorrent</h1>
+  <p class="hint">Right-click any magnet or .torrent link and choose <b>Send to qBittorrent</b>.</p>
+
+  <h2>First time setup</h2>
+  <div class="card">
+    In qBittorrent open <b>Tools → Options → Web UI</b> (on Mac: <b>qBittorrent → Settings → Web UI</b>):
+    <ol>
+      <li>Tick <b>Web User Interface (Remote control)</b>.</li>
+      <li>Note the <b>Port</b> (default 8080) and set a <b>username and password</b>.</li>
+      <li>Click <b>Apply</b> / <b>OK</b>, then fill in the same details below.</li>
+    </ol>
+  </div>
+
+  <h2>Connection</h2>
+  <label for="url">Web UI address</label>
+  <input id="url" type="url" placeholder="http://localhost:8080">
+  <p class="hint">Same computer: <code>http://localhost:8080</code>. Another machine on your network: <code>http://192.168.1.50:8080</code>.</p>
+
+  <label for="username">Username</label>
+  <input id="username" type="text" autocomplete="off">
+
+  <label for="password">Password</label>
+  <input id="password" type="password" autocomplete="off">
+
+  <h2>When adding torrents</h2>
+  <label for="savepath">Save folder <span class="hint">(optional — blank uses qBittorrent's default)</span></label>
+  <input id="savepath" type="text" placeholder="/home/you/Downloads">
+
+  <label for="category">Category <span class="hint">(optional)</span></label>
+  <input id="category" type="text">
+
+  <label class="check"><input id="paused" type="checkbox"> Add torrents paused / stopped</label>
+  <label class="check"><input id="sequential" type="checkbox"> Download in sequential order</label>
+  <label class="check"><input id="firstLast" type="checkbox"> Download first and last pieces first</label>
+
+  <h2>Behaviour</h2>
+  <label class="check"><input id="interceptMagnets" type="checkbox">
+    <span>Send magnet links to qBittorrent when I click them<span class="hint" style="display:block">Otherwise only the right-click menu is used.</span></span></label>
+  <label class="check"><input id="fetchTorrentFiles" type="checkbox">
+    <span>Download .torrent files with the browser first<span class="hint" style="display:block">Makes links work on sites that need you to be logged in.</span></span></label>
+  <label class="check"><input id="notify" type="checkbox"> Also show a system notification when a torrent is added</label>
+
+  <div class="actions row">
+    <button id="save" class="primary">Save</button>
+    <button id="test">Test connection</button>
+    <span id="status" class="status"></span>
+  </div>
+</main>
+<script src="options.js" type="module"></script>
+</body>
+</html>

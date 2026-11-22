@@ -1,0 +1,37 @@
+:root {
+  --bg: #ffffff; --fg: #1d2330; --muted: #5d6676; --line: #d9dee6;
+  --field: #f5f7fa; --accent: #2178d6; --accent-fg: #fff; --ok: #2e9e44; --err: #d93025;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #1b1e24; --fg: #e6e9ef; --muted: #9aa3b2; --line: #343a45; --field: #252a33; --accent: #4a97ea; --ok: #5cc46f; --err: #ff6b5e; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+h1 { font-size: 20px; margin: 0 0 4px; display: flex; align-items: center; gap: 10px; }
+h1 img { width: 28px; height: 28px; }
+h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 28px 0 10px; }
+label { display: block; margin: 12px 0 4px; font-weight: 600; }
+.hint { color: var(--muted); font-size: 12.5px; margin: 3px 0 0; font-weight: 400; }
+input[type=text], input[type=url], input[type=password], textarea {
+  width: 100%; padding: 8px 10px; border: 1px solid var(--line); border-radius: 6px;
+  background: var(--field); color: var(--fg); font: inherit;
+}
+textarea { resize: vertical; min-height: 64px; font-size: 12.5px; }
+input:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: -1px; border-color: transparent; }
+.check { display: flex; gap: 10px; align-items: flex-start; font-weight: 400; margin: 10px 0; cursor: pointer; }
+.check input { margin-top: 3px; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+button {
+  padding: 8px 14px; border-radius: 6px; border: 1px solid var(--line); background: var(--field);
+  color: var(--fg); font: inherit; font-weight: 600; cursor: pointer;
+}
+button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-fg); }
+button:hover { filter: brightness(1.07); }
+button:disabled { opacity: .6; cursor: default; }
+.status { font-size: 13px; }
+.status.ok { color: var(--ok); }
+.status.err { color: var(--err); }
+.card { border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; background: var(--field); font-size: 13px; }
+.card ol { margin: 6px 0 0; padding-left: 18px; }
+code { background: var(--bg); border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; font-size: 12px; }

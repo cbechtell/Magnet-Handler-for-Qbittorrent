@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Magnet Handler for qBittorrent",
+  "version": "1.1.0",
+  "description": "Send magnet and .torrent links to your own qBittorrent Web UI with one click or from the right-click menu.",
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "notifications",
+    "scripting",
+    "declarativeNetRequestWithHostAccess"
+  ],
+  "optional_host_permissions": ["http://*/*", "https://*/*"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Magnet Handler for qBittorrent",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
