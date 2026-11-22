@@ -4,7 +4,7 @@ A browser extension that sends magnet links and `.torrent` files straight to you
 
 Works in **Chrome, Brave, Edge, Vivaldi** and other Chromium-based browsers, on Windows, macOS and Linux.
 
-![Clicking a magnet link sends it to qBittorrent](docs/screenshots/1-click-magnet.png)
+![Clicking a magnet link sends it to qBittorrent](magnet-handler-github-repo/docs/screenshots/1-click-magnet.png)
 
 ## Features
 
