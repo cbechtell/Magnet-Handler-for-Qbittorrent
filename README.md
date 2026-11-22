@@ -60,7 +60,7 @@ In the extension's settings page:
 
 You should see **"Connected — qBittorrent vX.Y"**. That's it.
 
-![Settings page](docs/screenshots/3-settings.png)
+![Settings page](magnet-handler-github-repo/docs/screenshots/3-settings.png)
 
 ## Updating
 
